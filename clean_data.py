@@ -1,23 +1,18 @@
 import pandas as pd
 
-# Load the raw dataset
-df = pd.read_csv("data/spotify_long_hits_raw.csv")
+df = pd.read_csv("spotify_long_tracks_2014_2024.csv")
 
-# Inspect the data
 print(df.head())
 print(df.info())
 
-# Basic cleaning
 df = df.rename(columns={
-    "track_name": "title",
-    "artist_name": "artist"
+    "Name": "title",
+    "Duration (Minutes)": "duration",
+    "Artists": "artist"
 })
 
-# Remove rows with missing release year
-df = df.dropna(subset=["release_year"])
-df["release_year"] = df["release_year"].astype(int)
+df = df.dropna(subset=["title", "duration", "artist"])
 
-# Save clean dataset
-df.to_csv("data/spotify_long_hits_clean.csv", index=False)
+df.to_csv("spotify_long_hits_clean.csv", index=False)
 
-print("Clean dataset saved successfully.")
+print("Cleaned CSV saved with", len(df), "rows.")
