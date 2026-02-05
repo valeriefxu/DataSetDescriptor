@@ -1,5 +1,5 @@
 # DataSetDescriptor
-Provenance: Where did this data come from? Who created it? Why?
+Provenance: 
 This data came from Kaggle and complied by the user thedrzee. It aggregates data from Spotify’s publicly available audio and chart metadata to document songs released between 2014 and 2024 that demonstrated long-term popularity on the platform. The dataset was created to capture trends in music longevity during the streaming era, where success is increasingly measured by sustained listenership rather than physical sales or short-term chart peaks. Spotify, as one of the dominant global music streaming services, provides an influential lens into contemporary listening behavior, making this dataset valuable for historical analysis of popular music in the 2010s and early 2020s.
 
 Structure: 
